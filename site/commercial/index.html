@@ -46,8 +46,6 @@
    "url": "https://weathermasterinc.com/",
    "logo": "https://weathermasterinc.com/commercial/images/logo-480.png",
    "image": "https://weathermasterinc.com/commercial/images/og-commercial.jpg",
-   "telephone": "+1-817-689-7836",
-   "email": "joe@weathermasterinc.com",
    "foundingDate": "1992",
    "address": {
     "@type": "PostalAddress",
@@ -73,8 +71,7 @@
     "@type": "ContactPoint",
     "contactType": "sales",
     "name": "Joe Hiller",
-    "telephone": "+1-817-689-7836",
-    "email": "joe@weathermasterinc.com",
+    "url": "https://weathermasterinc.com/commercial/#contact",
     "areaServed": "US-TX",
     "availableLanguage": "English"
    },
@@ -656,6 +653,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .contact-line{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:40px;color:var(--dim);font-size:15px}
 .contact-line a{text-decoration:none;border-bottom:1px solid var(--line)}
 .contact-line a:hover{color:var(--paper);border-color:var(--sun)}
+.contact-line .call-joe{font:inherit;color:var(--paper);padding:0;border-bottom:1px solid var(--line);cursor:pointer}.contact-line .call-joe:hover{border-color:var(--sun)}
 footer{border-top:1px solid var(--line);padding:44px 0 34px;padding-bottom:max(34px,env(safe-area-inset-bottom))}
 .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
 .foot img{height:42px;width:auto;display:block}
@@ -1062,8 +1060,8 @@ main:focus{outline:none}
   </div>
 </section>
 
-<!-- 9. FOGGED GLASS TESTIMONIALS (PLACEHOLDERS: replace with real client quotes before launch) -->
-<section class="fog" aria-label="Testimonials">
+<!-- 9. FOGGED GLASS: PROJECT SPOTLIGHTS (real projects; client testimonials can be added later) -->
+<section class="fog" aria-label="Project spotlights">
   <img class="fog-bg" id="fogImg" src="images/fog-bg.jpg" alt="">
   <canvas class="fog-canvas" id="fogCanvas" aria-hidden="true"></canvas>
   <div class="fog-copy">
@@ -1071,7 +1069,6 @@ main:focus{outline:none}
     <div class="q-nav" id="qNav"></div>
   </div>
   <p class="fog-hint" id="fogHint" aria-hidden="true">Wipe the glass</p>
-  <p class="fog-note">Sample testimonials shown. Replace with real client quotes before launch.</p>
 </section>
 
 <!-- 10. FAQ -->
@@ -1128,8 +1125,7 @@ main:focus{outline:none}
       <p class="form-note" role="status"></p>
     </form>
     <div class="contact-line">
-      <span>Or call Joe Hiller at <a href="tel:+18176897836">(817) 689-7836</a></span>
-      <a href="mailto:joe@weathermasterinc.com">joe@weathermasterinc.com</a>
+      <span>Prefer to talk? <button type="button" class="call-joe">Call Joe Hiller</button></span>
       <span>Fort Worth and Dallas</span>
     </div>
   </div>
@@ -1151,7 +1147,7 @@ main:focus{outline:none}
         <li><a href="https://www.instagram.com/weathermaster_windows" target="_blank" rel="noopener">Instagram<span class="sr"> (opens in a new tab)</span></a></li>
       </ul>
     </div>
-    <address class="nap">Weathermaster Door and Window Company &middot; Commercial window and door contractor &middot; Fort Worth, Texas &middot; Serving Fort Worth, Dallas, and the DFW metroplex since 1992 &middot; <a href="tel:+18176897836">(817) 689-7836</a> &middot; <a href="mailto:joe@weathermasterinc.com">joe@weathermasterinc.com</a></address>
+    <address class="nap">Weathermaster Door and Window Company &middot; Commercial window and door contractor &middot; Fort Worth, Texas &middot; Serving Fort Worth, Dallas, and the DFW metroplex since 1992</address>
     <div class="ftr-end">
       <p class="copy">&copy; <span id="yr">2026</span> Weathermaster Door and Window Company. Project photos are from Weathermaster jobs; other imagery is illustrative.</p>
       <p class="credit"><span class="credit-by">Website designed by</span><img src="images/titus-developments.svg" width="1224" height="405" alt="Titus Developments" class="credit-logo" loading="lazy" decoding="async"></p>
@@ -1161,12 +1157,14 @@ main:focus{outline:none}
 
 <script>
 const PREVIEWS = Array.from({length:10},(_,i)=>i===7?"images/svc-blast.jpg":i===0?"images/svc-curtainwall.jpg":i===2?"images/svc-highrise.jpg":`images/svc-${i}.jpg`);
-// PLACEHOLDER TESTIMONIALS: replace with real client quotes before publishing.
+// PROJECT SPOTLIGHTS: real Weathermaster projects, shown in the fogged-glass section.
+// When real client testimonials are available, add them here as { q, name, role, quote: true }.
 const QUOTES = [
-  { q:"They set every oversized panel on our mid-rise without a single rental crane, and we closed the envelope two weeks early.", name:'Client Name', role:'Project Manager, General Contractor' },
-  { q:"Our spec called for an imported curtain wall system nobody else in town wanted to touch. Weathermaster installed it and we passed inspection on the first walk.", name:'Client Name', role:'Principal Architect' },
-  { q:"We used to juggle three vendors for storefront, fire-rated, and ballistic glass. Now one crew handles all of it on every building we put up.", name:'Client Name', role:'Director of Construction, Property Developer' }
-];
+  { q:"A 1920 tower in downtown Fort Worth, fitted with new windows by our own crew.", name:'W.T. Waggoner Building', role:'Downtown Fort Worth &middot; New windows' },
+  { q:"A restored early-1900s high-rise in downtown Houston, with new windows set by Weathermaster.", name:'The Star', role:'Downtown Houston &middot; Historic high-rise' },
+  { q:"Windows and decorative castings for the Star-Telegram Building, fabricated and installed by Weathermaster.", name:'Star-Telegram Building', role:'Fort Worth &middot; Windows and castings' },
+  { q:"A historic remake and window refurbishment at the Fort Worth Stockyards, including the Lucchese storefront.", name:'Mule Alley', role:'Fort Worth Stockyards &middot; Historic remake' }
+]
 const LIFT_TEXT = [
   "Our own robot rolls up with the glass. No crane rental and no waiting on someone else's schedule.",
   "Four vacuum cups grip the face of the glass while the operator lifts it into position.",
@@ -1741,9 +1739,10 @@ const LIFT_TEXT = [
   const qStage = $('#qStage'), qNav = $('#qNav');
   QUOTES.forEach((t, i) => {
     const f = document.createElement('figure'); f.className = 'q-item' + (i ? ' off' : '');
-    f.innerHTML = `<blockquote>&ldquo;${t.q}&rdquo;</blockquote><figcaption><b>${t.name}</b>, ${t.role}</figcaption>`;
+    f.innerHTML = t.quote ? `<blockquote>&ldquo;${t.q}&rdquo;</blockquote><figcaption><b>${t.name}</b>, ${t.role}</figcaption>`
+      : `<blockquote>${t.q}</blockquote><figcaption><b>${t.name}</b> &middot; ${t.role}</figcaption>`;
     qStage.appendChild(f);
-    const d = document.createElement('button'); d.className = 'q-dot' + (i ? '' : ' on'); d.setAttribute('aria-label', 'Show testimonial ' + (i + 1));
+    const d = document.createElement('button'); d.className = 'q-dot' + (i ? '' : ' on'); d.setAttribute('aria-label', 'Show project ' + (i + 1));
     d.addEventListener('click', () => { showQ(i); restartQ(); }); qNav.appendChild(d);
   });
   let qi = 0, qt;
@@ -1816,12 +1815,26 @@ const LIFT_TEXT = [
 
   /* ====================== FORM ====================== */
   $$('.chip').forEach(c => c.addEventListener('click', () => c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') !== 'true')));
+
+  /* ---------- contact without publishing the address or number ----------
+     The email address and phone number never appear in the page source; they're assembled only when a visitor
+     uses the form or the call button, so simple scrapers that read pages for addresses and numbers find nothing. */
+  const WM_C = { m: ['com', 'weathermasterinc', 'joe'], t: ['8947', '79:', '928'] };   // digits stored shifted by one
+  const wmMail = () => `${WM_C.m[2]}${String.fromCharCode(64)}${WM_C.m[1]}.${WM_C.m[0]}`;
+  const wmTel = () => [...WM_C.t].reverse().map(g => [...g].map(c => String.fromCharCode(c.charCodeAt(0) - 1)).join(''));
+  $$('.call-joe').forEach(b => b.addEventListener('click', () => {
+    const [a, x, n] = wmTel();
+    if (matchMedia('(pointer: coarse)').matches) { location.href = `tel:+1${a}${x}${n}`; return; }
+    // on a computer, show the number in place (and keep it tappable for phones that report a fine pointer)
+    const l = document.createElement('a'); l.href = `tel:+1${a}${x}${n}`; l.textContent = `(${a}) ${x}-${n}`;
+    b.replaceWith(l);
+  }));
   $('#consultForm').addEventListener('submit', e => {
     e.preventDefault();
     const v = e.target.querySelector('input').value.trim();
     const types = $$('.chip[aria-pressed="true"]').map(c => c.textContent).join(', ') || 'Not specified';
     const body = encodeURIComponent(`Hi Joe,\n\nI'd like to book a free on-site consultation for a commercial project.\n\nType of work: ${types}\nBest way to reach me: ${v}\n`);
-    location.href = `mailto:joe@weathermasterinc.com?subject=${encodeURIComponent('Consultation request (commercial)')}&body=${body}`;
+    location.href = `mailto:${wmMail()}?subject=${encodeURIComponent('Consultation request (commercial)')}&body=${body}`;
     $('.form-note').textContent = 'Your email app should open with the request ready to send to Joe.';
   });
 

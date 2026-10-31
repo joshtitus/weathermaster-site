@@ -40,8 +40,6 @@
    "url": "https://weathermasterinc.com/",
    "logo": "https://weathermasterinc.com/residential/images/logo-480.png",
    "image": "https://weathermasterinc.com/residential/images/og-residential.jpg",
-   "telephone": "+1-817-689-7836",
-   "email": "joe@weathermasterinc.com",
    "foundingDate": "1992",
    "address": {"@type": "PostalAddress", "addressLocality": "Fort Worth", "addressRegion": "TX", "addressCountry": "US"},
    "areaServed": [
@@ -49,7 +47,7 @@
     {"@type": "City", "name": "Dallas, TX"},
     {"@type": "Place", "name": "Dallas–Fort Worth metroplex"}
    ],
-   "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "name": "Joe Hiller", "telephone": "+1-817-689-7836", "email": "joe@weathermasterinc.com", "areaServed": "US-TX", "availableLanguage": "English"},
+   "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "name": "Joe Hiller", "url": "https://weathermasterinc.com/residential/#contact", "areaServed": "US-TX", "availableLanguage": "English"},
    "sameAs": ["https://www.facebook.com/Weathermaster-Door-Window-Co-117803898278861/", "https://www.instagram.com/weathermaster_windows"],
    "knowsAbout": ["Luxury home windows", "Steel windows and doors", "Wood windows", "Clad windows", "Sliding glass walls", "Multi-panel sliding doors", "Corner glass", "Pivot doors", "Jumbo glass", "Imported European windows"],
    "hasOfferCatalog": {
@@ -396,6 +394,7 @@ main:focus{outline:none}
 .contact-line{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:40px;font-size:15px}
 .contact-line a{text-decoration:none;border-bottom:1px solid var(--line);color:var(--ink)}
 .contact-line a:hover{border-color:var(--bronze)}
+.contact-line .call-joe{font:inherit;color:var(--ink);padding:0;border-bottom:1px solid var(--line);cursor:pointer}.contact-line .call-joe:hover{border-color:var(--bronze)}
 footer{border-top:1px solid var(--line);padding:44px 0 34px;padding-bottom:max(34px,env(safe-area-inset-bottom))}
 .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
 .foot img{height:42px;width:auto}
@@ -707,12 +706,11 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;padding-bottom:max(3
   </div>
 </section>
 
-<!-- 8. WORDS (PLACEHOLDERS: replace with real client quotes before launch) -->
-<section class="words on-dark" aria-label="What clients say">
+<!-- 8. WORDS: our promise, in Joe Hiller's words (client testimonials can be added later) -->
+<section class="words on-dark" aria-label="Our promise">
   <div class="wrap">
     <div class="q-stage" id="qStage"></div>
     <div class="q-nav" id="qNav"></div>
-    <p class="q-note">Sample testimonials shown. Replace with real client quotes before launch.</p>
   </div>
 </section>
 
@@ -773,8 +771,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;padding-bottom:max(3
       <p class="form-note" role="status"></p>
     </form>
     <div class="contact-line">
-      <span>Or call Joe Hiller at <a href="tel:+18176897836">(817) 689-7836</a></span>
-      <a href="mailto:joe@weathermasterinc.com">joe@weathermasterinc.com</a>
+      <span>Prefer to talk? <button type="button" class="call-joe">Call Joe Hiller</button></span>
       <span>Fort Worth and Dallas</span>
     </div>
   </div>
@@ -796,7 +793,7 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;padding-bottom:max(3
         <li><a href="https://www.instagram.com/weathermaster_windows" target="_blank" rel="noopener">Instagram<span class="sr"> (opens in a new tab)</span></a></li>
       </ul>
     </div>
-    <address class="nap">Weathermaster Door and Window Company. Luxury residential windows and doors in Fort Worth, Texas, serving Fort Worth, Dallas, and the DFW metroplex since 1992. <a href="tel:+18176897836">(817) 689-7836</a>, <a href="mailto:joe@weathermasterinc.com">joe@weathermasterinc.com</a></address>
+    <address class="nap">Weathermaster Door and Window Company. Luxury residential windows and doors in Fort Worth, Texas, serving Fort Worth, Dallas, and the DFW metroplex since 1992.</address>
     <div class="ftr-end">
       <p class="copy">&copy; <span id="yr">2026</span> Weathermaster Door and Window Company. Project photos are from Weathermaster jobs. Hero and view images are enhanced from Weathermaster projects; images marked illustrative are not specific projects.</p>
       <p class="credit"><span class="credit-by">Website designed by</span><img src="images/titus-developments.svg" width="1224" height="405" alt="Titus Developments" class="credit-logo" loading="lazy" decoding="async"></p>
@@ -805,12 +802,13 @@ footer{border-top:1px solid var(--line);padding:44px 0 34px;padding-bottom:max(3
 </footer>
 
 <script>
-// PLACEHOLDER TESTIMONIALS: replace with real client quotes before publishing.
+// OUR PROMISE: commitments in Joe Hiller's words, shown where client testimonials will go.
+// When real client testimonials are available, add them here in the same shape.
 const QUOTES = [
-  { q:"We designed the whole house around the hill country view, and Weathermaster made the glass disappear. It's the first thing every guest notices.", name:'Client Name', role:'Homeowner' },
-  { q:"They read our drawings closer than most consultants do, caught two head details before ordering, and set every panel without a single callback.", name:'Client Name', role:'Residential Architect' },
-  { q:"Second-story corner glass on a finished frame, set in a day by their own crew and robot. That's why we call them first.", name:'Client Name', role:'Custom Home Builder' }
-];
+  { q:"I'll walk the house and read your drawings before I give you a number, so the plan and the price hold up.", name:'Joe Hiller', role:'Weathermaster Door and Window' },
+  { q:"Our own crew and our own glass robots set every opening. No strangers working in your home.", name:'Joe Hiller', role:'Weathermaster Door and Window' },
+  { q:"You'll know lead times before anything is ordered, and we protect your floors and finishes while we work.", name:'Joe Hiller', role:'Weathermaster Door and Window' }
+]
 </script>
 <script>
 (() => {
@@ -1029,7 +1027,7 @@ const QUOTES = [
     const f = document.createElement('figure'); f.className = 'q-item' + (i ? ' off' : '');
     f.innerHTML = `<blockquote>&ldquo;${t.q}&rdquo;</blockquote><figcaption><b>${t.name}</b>, ${t.role}</figcaption>`;
     qStage.appendChild(f);
-    const d = document.createElement('button'); d.className = 'q-dot' + (i ? '' : ' on'); d.type = 'button'; d.setAttribute('aria-label', 'Show testimonial ' + (i + 1));
+    const d = document.createElement('button'); d.className = 'q-dot' + (i ? '' : ' on'); d.type = 'button'; d.setAttribute('aria-label', 'Show promise ' + (i + 1));
     d.addEventListener('click', () => { showQ(i); restartQ(); }); qNav.appendChild(d);
   });
   let qi = 0, qt;
@@ -1070,12 +1068,26 @@ const QUOTES = [
     if (c.dataset.g === 'role' && on) $$('.chip[data-g="role"]').forEach(o => o.setAttribute('aria-pressed', 'false'));
     c.setAttribute('aria-pressed', on);
   }));
+
+  /* ---------- contact without publishing the address or number ----------
+     The email address and phone number never appear in the page source; they're assembled only when a visitor
+     uses the form or the call button, so simple scrapers that read pages for addresses and numbers find nothing. */
+  const WM_C = { m: ['com', 'weathermasterinc', 'joe'], t: ['8947', '79:', '928'] };   // digits stored shifted by one
+  const wmMail = () => `${WM_C.m[2]}${String.fromCharCode(64)}${WM_C.m[1]}.${WM_C.m[0]}`;
+  const wmTel = () => [...WM_C.t].reverse().map(g => [...g].map(c => String.fromCharCode(c.charCodeAt(0) - 1)).join(''));
+  $$('.call-joe').forEach(b => b.addEventListener('click', () => {
+    const [a, x, n] = wmTel();
+    if (matchMedia('(pointer: coarse)').matches) { location.href = `tel:+1${a}${x}${n}`; return; }
+    // on a computer, show the number in place (and keep it tappable for phones that report a fine pointer)
+    const l = document.createElement('a'); l.href = `tel:+1${a}${x}${n}`; l.textContent = `(${a}) ${x}-${n}`;
+    b.replaceWith(l);
+  }));
   $('#consultForm').addEventListener('submit', e => {
     e.preventDefault();
     const v = e.target.querySelector('input').value.trim();
     const pick = g => $$(`.chip[data-g="${g}"][aria-pressed="true"]`).map(c => c.textContent).join(', ') || 'Not specified';
     const body = encodeURIComponent(`Hi Joe,\n\nI'd like to book a free consultation for a home.\n\nI am: ${pick('role')}\nOn the plans: ${pick('work')}\nBest way to reach me: ${v}\n`);
-    location.href = `mailto:joe@weathermasterinc.com?subject=${encodeURIComponent('Consultation request (residential)')}&body=${body}`;
+    location.href = `mailto:${wmMail()}?subject=${encodeURIComponent('Consultation request (residential)')}&body=${body}`;
     $('.form-note').textContent = 'Your email app should open with the request ready to send to Joe.';
   });
 
