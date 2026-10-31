@@ -1,0 +1,8 @@
+---
+# cPanel "Git Version Control" deployment for weathermasterinc.com
+# Copies the website (the site/ folder, minus the README notes) into public_html.
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/xtmzof1etue8/public_html/
+    - /bin/cp -R site/. $DEPLOYPATH
+    - /bin/rm -f ${DEPLOYPATH}README.txt ${DEPLOYPATH}commercial/README.txt ${DEPLOYPATH}residential/README.txt

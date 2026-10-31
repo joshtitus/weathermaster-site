@@ -1,0 +1,58 @@
+# Weathermaster: security and speed settings for Apache hosts.
+# The same file sits in the site root, commercial/ and residential/ so each folder still works if it's hosted on its own.
+
+# ---------- Security ----------
+# Always use the secure address, without "www", e.g. https://weathermasterinc.com/residential/
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Old landing page leftovers (the previous intro video and button images) go to the new selector
+<IfModule mod_rewrite.c>
+  RewriteRule ^(videos|images/landing)/ / [L,R=301]
+</IfModule>
+
+# Don't list folder contents if someone browses to /images/
+Options -Indexes
+
+# Keep notes and hidden files private
+<FilesMatch "(^\.|^README|\.(md|bak|zip|log)$)">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  # Browsers remember to use HTTPS for a year. Only takes effect once the site is served over HTTPS.
+  Header always set Strict-Transport-Security "max-age=31536000" env=HTTPS
+  # Only run scripts, styles and fonts from this site and Google Fonts; nobody else can frame the pages.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self' mailto:; object-src 'none'; upgrade-insecure-requests"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header unset X-Powered-By
+</IfModule>
+
+# ---------- Speed ----------
+# Compress text files and let browsers cache images, video and fonts.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/xml application/javascript application/json image/svg+xml
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/webm "access plus 1 year"
+</IfModule>
+<IfModule mod_mime.c>
+  AddType video/webm .webm
+  AddType text/plain .txt
+</IfModule>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://weathermasterinc.com/</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://weathermasterinc.com/commercial/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <image:image><image:loc>https://weathermasterinc.com/commercial/images/og-commercial.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/commercial/images/real-robot.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/commercial/images/real-crew.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/commercial/images/pj-waggoner.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/commercial/images/pj-star-houston.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/commercial/images/pj-star-telegram.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/commercial/images/pj-mule-alley.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/commercial/images/pj-lucchese.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/commercial/images/pj-cinemark.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/commercial/images/pj-morningstar.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/commercial/images/pj-bronze-doors.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://weathermasterinc.com/commercial/images/lift/poster.jpg</video:thumbnail_loc>
+      <video:title>Setting a jumbo glass panel with our glass robot, no crane needed</video:title>
+      <video:description>A Weathermaster crew and our wheeled glass robot carry a jumbo glass panel to a storefront, set it in the opening, and roll on to the next one.</video:description>
+      <video:content_loc>https://weathermasterinc.com/commercial/images/lift/robot-film.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:publication_date>2026-10-20</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://weathermasterinc.com/residential/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <image:image><image:loc>https://weathermasterinc.com/residential/images/og-residential.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/residential/images/hero-day.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/residential/images/hero-evening.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/residential/images/ig-156-0.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/residential/images/ig-38-0.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/residential/images/ig-40-0.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/residential/images/ig-41-0.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/residential/images/ig-43-0.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/residential/images/ig-49-0.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/residential/images/ig-159-0.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/residential/images/ig-148-0.jpg</image:loc></image:image>
+    <image:image><image:loc>https://weathermasterinc.com/residential/images/ig-142-0.jpg</image:loc></image:image>
+  </url>
+</urlset>
